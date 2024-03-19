@@ -7,8 +7,16 @@
 
 ## Setup
 
-Create a virtual environment (Linux):
+Create and Source a virtual environment (Linux):
 ```
-python3 -m venv shortsgen-venv
-source shortsgen/venv/activate
+$ python3 -m venv shortsgen-venv
+$ source shortsgen/venv/activate
+```
+
+Install dependencies:
+```
+$ pip install transformers
+$ pip install datasets
+$ pip install torch
+# pip install soundfile
 ```
