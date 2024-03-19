@@ -1,6 +1,6 @@
 # YouTube shorts Generator
 
-> **This tool is used to convert Web Articles into YouTube shorts using AI.**
+> **This tool "YouTube shorts generator" is used to convert Web Articles into YouTube shorts using AI.**
 
 > [!NOTE]
 > Work in Progress
