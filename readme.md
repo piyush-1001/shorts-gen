@@ -8,7 +8,7 @@
 ## Setup
 
 Create a virtual environment (Linux):
-'''
+```
 python3 -m venv shortsgen-venv
 source shortsgen/venv/activate
-'''
+```
