@@ -28,6 +28,7 @@ $ source shortsgen/venv/activate
 
 Install dependencies:
 ```
+$ pip install sentencepiece
 $ pip install transformers
 $ pip install datasets
 $ pip install torch
