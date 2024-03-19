@@ -6,6 +6,9 @@
 > Work in Progress
 
 ## Setup
+```
+git clone https://github.com/piyush-1001/shorts-gen.git
+```
 
 Create and Source a virtual environment (Linux):
 ```
