@@ -5,6 +5,16 @@
 > [!NOTE]
 > Work in Progress
 
+### ToDo
+
+- [x] Implementation of Summarizer
+- [x] Implementation of TTS
+- [ ] Implementation of Subtitles
+- [ ] Implementation of final video output
+- [ ] Backend
+- [ ] Frontend
+- [ ] Final Deployment
+
 ## Setup
 Clone the repository:
 ```
@@ -24,6 +34,12 @@ Create and Source a virtual environment (Linux):
 ```
 $ python3 -m venv shortsgen-venv
 $ source shortsgen/venv/activate
+```
+
+Create and Source a virtual environment (Windows):
+```
+python -m venv shortsgen-venv
+./shortsgen-venv/Scripts/Activate
 ```
 
 Install dependencies:
