@@ -42,6 +42,17 @@ python -m venv shortsgen-venv
 ./shortsgen-venv/Scripts/Activate
 ```
 
+If you get the following error:
+```
+Activate.ps1 cannot be loaded because running scripts is disabled on this system.
+```
+
+Then try this:
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+./shortsgen-venv/Scripts/Activate
+```
+
 Install dependencies:
 ```
 $ pip install sentencepiece
