@@ -2,7 +2,7 @@ import os
 from elevenlabs import VoiceSettings
 from elevenlabs.client import ElevenLabs
 
-ELEVENLABS_API_KEY = os.getenv("756098fa86fc8551355b4296da0f8715")
+ELEVENLABS_API_KEY = os.getenv("API KEY")
 client = ElevenLabs(
     api_key=ELEVENLABS_API_KEY,
 )
