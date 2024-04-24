@@ -23,6 +23,7 @@ git clone https://github.com/piyush-1001/shorts-gen.git
 
 Link for Background Image:
 [Background image](https://drive.google.com/file/d/1L9-TxMKxKUAEKvoacjIkc7CmVE-oBrEo/view?usp=drive_link)
+
 Clone the models:
 ```
 #make sure git lfs is installed
