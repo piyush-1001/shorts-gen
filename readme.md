@@ -59,5 +59,7 @@ $ pip install sentencepiece
 $ pip install transformers
 $ pip install datasets
 $ pip install torch
-# pip install soundfile
+$ pip install soundfile
+$ pip install elevenlabs
+$ pip install python-dotenv
 ```

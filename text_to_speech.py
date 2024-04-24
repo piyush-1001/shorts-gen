@@ -1,16 +1,46 @@
-#text_to_speech.py
+import os
+from elevenlabs import VoiceSettings
+from elevenlabs.client import ElevenLabs
 
-from transformers import pipeline
-from datasets import load_dataset
-import soundfile as sf
-import torch
+ELEVENLABS_API_KEY = os.getenv("756098fa86fc8551355b4296da0f8715")
+client = ElevenLabs(
+    api_key=ELEVENLABS_API_KEY,
+)
 
-def make_speech(summarized_article):
-    synthesiser = pipeline("text-to-speech", "speecht5_tts")
+def text_to_speech_files(texts: list) -> list:
+    saved_file_paths = []
+    counter = 0
 
-    embeddings_dataset = load_dataset("Matthijs/cmu-arctic-xvectors", split="validation")
-    speaker_embedding = torch.tensor(embeddings_dataset[7306]["xvector"]).unsqueeze(0)
-    # You can replace this embedding with your own as well.
-    speech = synthesiser(summarized_article, forward_params={"speaker_embeddings": speaker_embedding})
+    for text in texts:
+        # Calling the text_to_speech conversion API with detailed parameters
+        response = client.text_to_speech.convert(
+            voice_id="pNInz6obpgDQGcFmaJgB", # Adam pre-made voice
+            optimize_streaming_latency="0",
+            output_format="mp3_22050_32",
+            text=text,
+            model_id="eleven_turbo_v2", # use the turbo model for low latency, for other languages use the `eleven_multilingual_v2`
+            voice_settings=VoiceSettings(
+                stability=0.0,
+                similarity_boost=1.0,
+                style=0.0,
+                use_speaker_boost=True,
+            ),
+        )
 
-    sf.write("speech.wav", speech["audio"], samplerate=speech["sampling_rate"])
+        # Set the output file name
+        save_file_name = f"output_{counter}.mp3"
+        save_file_path = os.path.join(os.getcwd(), save_file_name)
+
+        # Writing the audio to a file
+        with open(save_file_path, "wb") as f:
+            for chunk in response:
+                if chunk:
+                    f.write(chunk)
+
+        saved_file_paths.append(save_file_path)
+        print(f"{save_file_path}: A new audio file was saved successfully!")
+
+        counter += 1
+
+    # Return the list of saved audio file paths
+    return saved_file_paths
