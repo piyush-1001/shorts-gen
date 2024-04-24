@@ -26,7 +26,6 @@ Clone the models:
 #make sure git lfs is installed
 git lfs install
 git clone https://huggingface.co/facebook/bart-large-cnn
-git clone https://huggingface.co/microsoft/speecht5_tts
 ```
 
 
