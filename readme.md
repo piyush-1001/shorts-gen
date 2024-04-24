@@ -9,8 +9,8 @@
 
 - [x] Implementation of Summarizer
 - [x] Implementation of TTS
-- [ ] Implementation of Subtitles
-- [ ] Implementation of final video output
+- [x] Implementation of Subtitles
+- [x] Implementation of final video output
 - [ ] Backend
 - [ ] Frontend
 - [ ] Final Deployment
