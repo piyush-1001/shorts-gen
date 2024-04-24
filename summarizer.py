@@ -10,7 +10,7 @@ def summarize_article(article, max_length=200, min_length=100):
 	summary = pipe(article, max_length=max_length, min_length=min_length, do_sample=False)
 	summarized_article = summary[0]['summary_text']
 	summarized_article_list_of_sentences = split_into_sentences(summarized_article)
-	return summarized_article_list_of_sentences
+	return summarized_article, summarized_article_list_of_sentences
 
 if __name__ == "__main__":
 	pass
