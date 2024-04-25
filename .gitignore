@@ -1,5 +1,7 @@
 shortsgen-venv/
-bart-large-cnn/
-speecht5_tts/
 __pycache__
 .env
+modules/__pycache__
+audio-clips/*
+output-videos/*
+models/*

@@ -1,0 +1,9 @@
+update readme: dependencies, add pytoch with cuda
+
+transformers
+torch
+elevenlabs
+moviepy
+mutagen
+load_dotenv
+flask

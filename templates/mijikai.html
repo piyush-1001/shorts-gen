@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijikai</title>
-    <link rel="stylesheet" href="mijikai.css">
+    <title>ShortsGen - A YouTube short generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mijikai.css') }}">
 </head>
 <body>
-    <script src="mijikai.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script> -->
+    <script src="{{ url_for('static', filename='mijikai.js') }}"></script>
     <nav>
         <div class = "n1">logo</div>
         <div class = "n2">
@@ -26,13 +27,14 @@
     </nav>
 
     <main class = "container1">
-        <div class = "title-head"><span style="color: rgb(141, 139, 139);">MIJIKAI</span>: Youtube Short Generator</div>
-        <div class = "title-description">Accelerate your content generation with Mijikai Yotube Short AI Generator. <br>Help people stay up-to-date in this fast paced world.</div>
+        <div class = "title-head"><span style="color: rgb(141, 139, 139);">ShortsGen</span>: Youtube Short Generator</div>
+        <div class = "title-description">Accelerate your content generation with ShortsGen: An AI powered YouTube Short Generator. <br>Help people stay up-to-date in this fast paced world.</div>
         <div class="generator">
             <textarea id = "t1" class = 'userinputtextarea' rows="8" cols="40" placeholder="Enter Article"></textarea>
             <textarea id = "t2" class = 'userinputtextarea' rows="8" cols="40"></textarea>
         </div>
-        <button onclick="convert()">Generate</button>
+        <button onclick="generate()">Generate</button>
+        also work on a download button!!!!!!!
         <a id="downloadLink" style="display: none;">Download</a>
     </main>
 </body>

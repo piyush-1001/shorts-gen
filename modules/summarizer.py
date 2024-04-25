@@ -1,10 +1,9 @@
 from transformers import pipeline
-import torch
 
 def summarize_article(article, max_length=200, min_length=100):
 	
 	#initialize the pipeline for summarization
-	pipe = pipeline("summarization", model="bart-large-cnn")
+	pipe = pipeline("summarization", model="./models/bart-large-cnn")
 
 	#summarize the article
 	summary = pipe(article, max_length=max_length, min_length=min_length, do_sample=False)

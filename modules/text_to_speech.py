@@ -1,8 +1,11 @@
 import os
 from elevenlabs import VoiceSettings
 from elevenlabs.client import ElevenLabs
+from dotenv import load_dotenv
 
-ELEVENLABS_API_KEY = os.getenv("API KEY")
+load_dotenv()
+ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
+
 client = ElevenLabs(
     api_key=ELEVENLABS_API_KEY,
 )
@@ -28,7 +31,7 @@ def text_to_speech_files(texts: list) -> list:
         )
 
         # Set the output file name
-        save_file_name = f"output_{counter}.mp3"
+        save_file_name = f"audio-clips/output_{counter}.mp3"
         save_file_path = os.path.join(os.getcwd(), save_file_name)
 
         # Writing the audio to a file

@@ -1,0 +1,7 @@
+transformers
+torch
+elevenlabs
+moviepy
+mutagen
+load_dotenv
+flask
