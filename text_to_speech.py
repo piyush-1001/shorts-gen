@@ -4,7 +4,7 @@ from elevenlabs.client import ElevenLabs
 
 ELEVENLABS_API_KEY = os.getenv("API KEY")
 client = ElevenLabs(
-    api_key=ELEVENLABS_API_KEY,
+    api_key="API KEY",
 )
 
 def text_to_speech_files(texts: list) -> list:
