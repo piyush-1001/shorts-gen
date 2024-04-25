@@ -61,4 +61,5 @@ $ pip install torch
 $ pip install soundfile
 $ pip install elevenlabs
 $ pip install python-dotenv
+$ pip install mutagen
 ```
