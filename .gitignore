@@ -1,3 +1,5 @@
 shortsgen-venv/
 bart-large-cnn/
 speecht5_tts/
+__pycache__
+.env
