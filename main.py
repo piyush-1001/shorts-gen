@@ -17,4 +17,4 @@ for file_path in saved_audio_files:
     print(file_path)
 
 # movie generation
-create_video(summarized_article_list_of_sentences)
+path_to_video = create_video(summarized_article_list_of_sentences)
